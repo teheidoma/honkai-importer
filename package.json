@@ -1,0 +1,69 @@
+{
+  "name": "honkai-importer",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "serve": "ng serve --configuration development",
+    "start": "electron-forge start",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "electron": "ng build --base-href=./ && electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "config": {
+    "forge": "./forge.config.js"
+  },
+  "private": true,
+  "main": "main.js",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "dependencies": {
+    "@angular/animations": "^16.0.0",
+    "@angular/common": "^16.0.0",
+    "@angular/compiler": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@angular/forms": "^16.0.0",
+    "@angular/platform-browser": "^16.0.0",
+    "@angular/platform-browser-dynamic": "^16.0.0",
+    "anychart": "^8.11.0",
+    "axios": "^1.4.0",
+    "chart.js": "^4.3.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "lodash": "^4.17.21",
+    "regedit": "^5.1.2",
+    "rxjs": "~7.8.0",
+    "sweetalert2": "^11.7.5",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.0.0",
+    "@angular/cli": "~16.0.0",
+    "@angular/compiler-cli": "^16.0.0",
+    "@angular/router": "^16.0.0",
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "@electron-forge/plugin-webpack": "^6.1.1",
+    "@types/jasmine": "~4.3.0",
+    "@types/lodash": "^4.14.194",
+    "autoprefixer": "^10.4.14",
+    "electron": "24.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "typescript": "~5.0.2"
+  }
+}
