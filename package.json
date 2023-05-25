@@ -12,6 +12,10 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
+  "repository": {
+    "url": "https://github.com/teheidoma/honkai-importer.git",
+    "type": "git"
+  },
   "config": {
     "forge": "./forge.config.js"
   },
@@ -39,6 +43,7 @@
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.7.5",
     "tslib": "^2.3.0",
+    "update-electron-app": "^2.0.1",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {

@@ -5,6 +5,8 @@ const fs = require("fs");
 const regedit = require('regedit')
 const axios = require('axios');
 const exec = require('child_process').exec;
+require('update-electron-app')()
+
 
 const registryKey = 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Star Rail';
 
