@@ -1,5 +1,13 @@
 module.exports = {
-  packagerConfig: {},
+  packagerConfig: {
+    "ignore": [
+      "^/src$",
+      "^/.angular$",
+      "^/.env",
+      "^/out$",
+      "^/data.temp$"
+    ]
+  },
   rebuildConfig: {},
   makers: [
     {
