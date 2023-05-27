@@ -1,6 +1,9 @@
 {
   "name": "honkai-importer",
   "version": "0.0.1",
+  "author": {
+    "url": "https://teheidoma.com"
+  },
   "scripts": {
     "ng": "ng",
     "serve": "ng serve --configuration development",
@@ -8,16 +11,19 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "electron": "ng build --base-href=./ && electron .",
-    "package": "ng build --base-href=./ && electron-forge package",
-    "make": "electron-forge make"
+    "pack": "ng build --base-href=./ && electron-builder --dir",
+    "dist": "ng build --base-href=./ && electron-builder"
   },
   "repository": {
     "url": "https://github.com/teheidoma/honkai-importer.git",
     "type": "git"
   },
-  "config": {
-    "forge": "./forge.config.js"
+  "build": {
+    "appId": "com.teheidoma.honkai-importer",
+    "win": {
+      "target": "nsis"
+    },
+    "icon": null
   },
   "private": true,
   "main": "main.js",
@@ -37,7 +43,6 @@
     "anychart": "^8.11.0",
     "axios": "^1.4.0",
     "chart.js": "^4.3.0",
-    "electron-squirrel-startup": "^1.0.0",
     "lodash": "^4.17.21",
     "regedit": "^5.1.2",
     "rxjs": "~7.8.0",
@@ -51,16 +56,11 @@
     "@angular/cli": "~16.0.0",
     "@angular/compiler-cli": "^16.0.0",
     "@angular/router": "^16.0.0",
-    "@electron-forge/cli": "^6.1.1",
-    "@electron-forge/maker-deb": "^6.1.1",
-    "@electron-forge/maker-rpm": "^6.1.1",
-    "@electron-forge/maker-squirrel": "^6.1.1",
-    "@electron-forge/maker-zip": "^6.1.1",
-    "@electron-forge/plugin-webpack": "^6.1.1",
     "@types/jasmine": "~4.3.0",
     "@types/lodash": "^4.14.194",
     "autoprefixer": "^10.4.14",
     "electron": "24.3.0",
+    "electron-builder": "^23.6.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
